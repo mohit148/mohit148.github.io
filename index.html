@@ -1,9 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" class="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/f7fb91e275.js" crossorigin="anonymous"></script>
+  <meta name="google-signin-client_id" content="1009330894623-ptov013tad31lqttjpa8ep1hfn9opno4.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
 <body>
+    <div id="header">
+        <a href="/hello.html" class="logo"><h1>mohit</h1></a>
+        <div id="nav">
+          <a href="/home">Home</a>
+          <a href="/news">News</a>
+          <a href="/contact">Invite</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="body-content">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis eum amet debitis cumque nesciunt, culpa suscipit voluptatem nam quam recusandae corrupti accusamus beatae, provident, consequuntur inventore dignissimos accusantium labore modi!</p>
+            <button>hello</button>
+            <button>bruh</button>
+        </div>
+    </div>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<script>
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+</script>
 </body>
 </html>
